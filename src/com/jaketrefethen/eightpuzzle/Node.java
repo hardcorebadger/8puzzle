@@ -51,7 +51,7 @@ public class Node {
 		case 1:
 			return manhattanSum();
 		case 2:
-			return 0;
+			return manhattanMax();
 		default:
 			return 0;
 		}
@@ -143,6 +143,22 @@ public class Node {
 			} else {
 				if (state[i] != i+1) {
 					m+=manhattanDistance(i,state[i]-1);
+				}
+			}
+		}
+		return m;
+	}
+	
+	public int manhattanMax() {
+		int m = 0;
+		for (int i = 0; i < 9; i++) {
+			if (state[i] == 0) {
+				if (i != 8) {
+					m = Math.max(m, manhattanDistance(i,8));
+				}
+			} else {
+				if (state[i] != i+1) {
+					m = Math.max(m, manhattanDistance(i,state[i]-1));
 				}
 			}
 		}

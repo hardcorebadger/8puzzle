@@ -18,7 +18,7 @@ public class Start {
 		if (args.length < 4) {
 			System.out.println("Incorrect Format, Need 4 Arguments: [difficulty] [heuristic] [useHeuristic] [useCost]");
 			System.out.println("[difficulty] (integer)");
-			System.out.println("[heuristic] 0 = misplaced tiles, 1 = manhattan distance sum, 2 = custom");
+			System.out.println("[heuristic] 0 = misplaced tiles, 1 = manhattan distance sum, 2 = max manhattan distance");
 			System.out.println("[useHeuristic] n = no, y = yes");
 			System.out.println("[useCost] n = no, y = yes");
 			System.out.println("Instructions For A*: set [useHeuristic] and [useCost] to yes");
